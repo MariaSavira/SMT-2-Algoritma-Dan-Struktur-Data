@@ -38,6 +38,7 @@ public class Mahasiswa07{
                 return "Kinerja cukup";
             } else {
                 return "Kinerja kurang";
+                
             }
         }
     }
