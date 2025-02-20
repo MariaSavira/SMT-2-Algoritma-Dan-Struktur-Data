@@ -1,4 +1,4 @@
-public class MahasiswaMain07{
+public class MahasiswaMain07 {
     public static void main(String[] args) {
         Mahasiswa07 mhs1 = new Mahasiswa07("", "", "", 0.0);
         mhs1.nama = "Muhammad Ali Farhan";
@@ -14,5 +14,6 @@ public class MahasiswaMain07{
         Mahasiswa07 mhs2 = new Mahasiswa07("Annisa Nabila", "2141720160", "TI 2L", 3.25);
         mhs2.updateIPK(3.30);
         mhs2.tampilkanInformasi();
+
     }
 }
