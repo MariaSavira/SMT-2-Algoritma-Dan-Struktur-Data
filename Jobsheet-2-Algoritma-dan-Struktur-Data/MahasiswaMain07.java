@@ -15,7 +15,7 @@ public class MahasiswaMain07 {
         mhs2.updateIPK(3.30);
         mhs2.tampilkanInformasi();
 
-        Mahasiswa07 mhsMaria = new Mahasiswa07("Maria Savira", "244107060144", "SIB 1A", 3.95);
+        Mahasiswa07 mhsMaria = new Mahasiswa07("Maria Savira", "244107060144", "SIB 1A", 5);
         mhsMaria.tampilkanInformasi();
         System.out.println(mhsMaria.nilaiKinerja());
 
