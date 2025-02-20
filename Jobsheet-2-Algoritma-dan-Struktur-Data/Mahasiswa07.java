@@ -1,4 +1,4 @@
-public class Mahasiswa{
+public class Mahasiswa07{
     String nama;
     String nim;
     String kelas;
