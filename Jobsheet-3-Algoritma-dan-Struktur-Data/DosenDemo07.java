@@ -17,35 +17,27 @@ public class DosenDemo07{
             System.out.print("Masukkan nama dosen : ");
             scan.nextLine();
             nama = scan.nextLine();
-            System.out.print("Masukkan jenis kelamin dosen : ");
+            System.out.print("Masukkan jenis kelamin dosen (Pria / Wanita) : ");
             jk = scan.nextLine();
             System.out.print("Masukkan usia dosen : ");
             usia = scan.nextInt();
             System.out.println("=======================================");
             System.out.println();
 
-            if (jk.equalsIgnoreCase("Laki-laki") || jk.equalsIgnoreCase("laki laki")){
+            if (jk.equalsIgnoreCase("Pria")){
                 jenisKelamin = true;
-            } else if (jk.equalsIgnoreCase("perempuan")){
+            } else if (jk.equalsIgnoreCase("Wanita")){
                 jenisKelamin = false;
             }
 
             dosen[i] = new Dosen07(kode, nama, jenisKelamin, usia);
         }
+        
+        DataDosen07.dataSemuaDosen(dosen, jenisKelamin);
+        DataDosen07.jumlahDosenPerJenisKelamin(dosen);
+        DataDosen07.rerataUsiaDosenPerJenisKelamin(dosen);
+        DataDosen07.infoDosenTertua(dosen);
+        DataDosen07.infoDosenTermuda(dosen);
 
-        System.out.println("Data Dosen");
-
-        for (Dosen07 d : dosen) {
-            System.out.println("Kode          : " + d.kode);
-            System.out.println("Nama          : " + d.nama);
-            if (jenisKelamin){
-                System.out.println("Jenis Kelamin : Laki-laki");
-            } else if (!jenisKelamin){
-                System.out.println("Jenis Kelamin : Perempuan");
-            }
-            System.out.println("Usia          : " + d.usia);
-            System.out.println("========================");
-            System.out.println();
-        }
     }
 }
