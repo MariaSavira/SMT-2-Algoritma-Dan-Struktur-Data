@@ -4,7 +4,7 @@ public class Mahasiswa07{
     public String kelas;
     public float ipk;
 
-    static void cetakArray(Mahasiswa07[] mahasiswa){
+    static void cetakInfo(Mahasiswa07[] mahasiswa){
         for (int i = 0; i < mahasiswa.length; i++) {
             System.out.println("Data Mahasiswa ke-" + (i + 1));
             System.out.println("NIM   : " + mahasiswa[i].nim);
