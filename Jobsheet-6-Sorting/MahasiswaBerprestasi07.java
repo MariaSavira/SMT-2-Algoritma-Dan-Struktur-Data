@@ -1,7 +1,13 @@
 public class MahasiswaBerprestasi07 {
-    Mahasiswa07[] listMhs = new Mahasiswa07[5];
+    int idxJML;
+    Mahasiswa07[] listMhs;
     int idx;
 
+    public MahasiswaBerprestasi07(int idxJML) {
+        this.idxJML = idxJML;
+        listMhs = new Mahasiswa07[idxJML];
+    }
+    
     void tambah(Mahasiswa07 m) {
         if (idx < listMhs.length) {
             listMhs[idx] = m;
