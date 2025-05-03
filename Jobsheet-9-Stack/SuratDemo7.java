@@ -39,8 +39,7 @@ public class SuratDemo7 {
                         System.out.println("Memverifikasi surat milik " + dinilai.namaMahasiswa);
                         System.out.println("Jenis Izin: " + dinilai.jenisIzin);
                         System.out.println("Durasi Izin: " + dinilai.durasi + " hari");
-                        System.out.println("--------------------------------------------");
-                        System.out.print("Apakah izin diterima? (Y/T): ");
+                        System.out.print("\nTerima Izin? (Y/T) : ");
                         char status = scan.next().charAt(0);
                         if (status == 'Y' || status == 'y') {
                             System.out.println("Izin diterima.");
