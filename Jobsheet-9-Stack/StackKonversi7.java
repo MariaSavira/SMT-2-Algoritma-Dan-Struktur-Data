@@ -4,7 +4,7 @@ public class StackKonversi7 {
     int top;
 
     public StackKonversi7() {
-        this.size = 32; // asumsi 32 bit
+        this.size = 32; 
         tumpukanBiner = new int[size];
         top = -1;
     }
