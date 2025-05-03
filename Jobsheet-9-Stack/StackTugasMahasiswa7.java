@@ -2,11 +2,13 @@ public class StackTugasMahasiswa7 {
     Mahasiswa7 stack[];
     int size;
     int top;
+    int brpBanyak;
 
     public StackTugasMahasiswa7(int size) {
         this.size = size;
         stack = new Mahasiswa7[size];
         top = -1;
+        brpBanyak = 0;
     }
 
     boolean isFull() {
@@ -53,6 +55,14 @@ public class StackTugasMahasiswa7 {
         }
     }
 
+    Mahasiswa7 peekBottom(){
+        if (!isEmpty()) {
+            return stack[0];
+        } else {
+            return null;
+        }
+    }
+
     void print() {
         for (int i = 0; i <= top; i++) {
             System.out.println(stack[i].nama + "\t" + stack[i].nim + "\t" + stack[i].kelas);
@@ -60,4 +70,11 @@ public class StackTugasMahasiswa7 {
         System.out.println("");
     }
 
+    int hitungBerapaBanyak(){
+        if (!isEmpty()){
+            return top + 1;
+        } else {
+            return 0;
+        }
+    }
 }
