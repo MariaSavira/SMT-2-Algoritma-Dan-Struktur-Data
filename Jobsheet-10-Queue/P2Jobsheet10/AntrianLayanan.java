@@ -7,11 +7,12 @@ public class AntrianLayanan {
     int size;
     int max;
 
-    public AntrianLayanan(int n) {
-        max = n;
-        data = new Mahasiswa[max];
+    public AntrianLayanan(int max) {
+        this.max = max;
+        this.data = new Mahasiswa[max];
         size = 0;
-        front = rear = -1;
+        front = 0;
+        rear = -1;
     }
 
     public int getJumlahAntrian(){
@@ -87,5 +88,15 @@ public class AntrianLayanan {
         front = (front + 1) % max;
         size--;
         return mhs;
+    }
+
+    public void lihatAkhir(){
+        if (IsEmpty()) {
+            System.out.println("Antrian kosong.");
+        } else {
+            System.out.print("Mahasiswa terdepan: ");
+            System.out.println("NIM - NAMA - PRODI - KELAS");
+            data[rear].tampilkanData();
+        }
     }
 }
