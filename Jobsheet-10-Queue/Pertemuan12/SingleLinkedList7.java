@@ -35,7 +35,7 @@ public class SingleLinkedList7 {
 
     public void addLast(Mahasiswa7 input){
         NodeMahasiswa7 ndInput = new NodeMahasiswa7(input, null);
-        if (!isEmpty()){
+        if (isEmpty()){
             head = ndInput;
             tail = ndInput;
         } else {
@@ -58,8 +58,7 @@ public class SingleLinkedList7 {
                 break;
             }
             temp = temp.next;
-        }
-        while (temp != null);
+        } while (temp != null);
     }
 
     public void insertAt(int index, Mahasiswa7 input){

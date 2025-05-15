@@ -1,21 +1,89 @@
 package Pertemuan12;
+import java.util.Scanner;
 
 public class SLLMain7 {
     public static void main(String[] args) {
         SingleLinkedList7 sll = new SingleLinkedList7();
+        Scanner scan = new Scanner(System.in);
+        int pilih = 0;
+        String nim = "";
+        String nama = "";
+        String kelas = "";
+        String key = "";
+        int indeks = 0;
+        double ipk = 0;
 
-        Mahasiswa7 mhs1 = new Mahasiswa7("101", "Maria", "SIB-1A", 3.75);
-        Mahasiswa7 mhs2 = new Mahasiswa7("102", "Savira", "SIB-1B", 3.65);
-        Mahasiswa7 mhs3 = new Mahasiswa7("103", "Sasa", "SIB-1C", 3.90);
-        Mahasiswa7 mhs4 = new Mahasiswa7("104", "Marsha", "SIB-1D", 3.55);
+        boolean ulang = true;
+        do {
+            System.out.println("\n1. Input data pertama");
+            System.out.println("2. Input data terakhir");
+            System.out.println("3. Input data setelah... ");
+            System.out.println("4. Input data pada indeks ke... ");
+            System.out.println("5. Print Data");
+            System.out.println("0. Keluar");
+            System.out.print("Pilih menu : ");
+            pilih = scan.nextInt();
+            scan.nextLine();
+            System.out.println("");
 
-        sll.print();
-        sll.addFirst(mhs4);
-        sll.print();
-        sll.addFirst(mhs1);
-        sll.print();
-        sll.insertAfter("Marsha", mhs3);
-        sll.insertAt(2, mhs2);
-        sll.print();
+            switch (pilih){
+                case 1:
+                    System.out.print("NIM : ");
+                    nim = scan.nextLine();
+                    System.out.print("Nama : ");
+                    nama = scan.nextLine();
+                    System.out.print("Kelas : ");
+                    kelas = scan.nextLine();
+                    System.out.print("IPK : ");
+                    ipk = scan.nextDouble();
+                    sll.addFirst(new Mahasiswa7(nim, nama, kelas, ipk));
+                    break;
+                case 2:
+                    System.out.print("NIM : ");
+                    nim = scan.nextLine();
+                    System.out.print("Nama : ");
+                    nama = scan.nextLine();
+                    System.out.print("Kelas : ");
+                    kelas = scan.nextLine();
+                    System.out.print("IPK : ");
+                    ipk = scan.nextDouble();
+                    sll.addLast(new Mahasiswa7(nim, nama, kelas, ipk));
+                    break;
+                case 3:
+                    System.out.print("Tambah setelah nama : ");
+                    key = scan.nextLine();
+                    System.out.println("");
+                    System.out.print("NIM : ");
+                    nim = scan.nextLine();
+                    System.out.print("Nama : ");
+                    nama = scan.nextLine();
+                    System.out.print("Kelas : ");
+                    kelas = scan.nextLine();
+                    System.out.print("IPK : ");
+                    ipk = scan.nextDouble();
+                    sll.insertAfter(key, new Mahasiswa7(nim, nama, kelas, ipk));
+                    break;
+                case 4:
+                    System.out.print("NIM : ");
+                    nim = scan.nextLine();
+                    System.out.print("Nama : ");
+                    nama = scan.nextLine();
+                    System.out.print("Kelas : ");
+                    kelas = scan.nextLine();
+                    System.out.print("IPK : ");
+                    ipk = scan.nextDouble();
+                    System.out.print("\nTambah pada indeks  : ");
+                    indeks = scan.nextInt();
+                    sll.insertAt(indeks, new Mahasiswa7(nim, nama, kelas, ipk));
+                    break;
+                case 5:
+                    sll.print();
+                    break;
+                case 0:
+                    ulang = false;
+            }
+        }
+        while (ulang);
+            System.out.println("Terima kasih!");
     }
 }
