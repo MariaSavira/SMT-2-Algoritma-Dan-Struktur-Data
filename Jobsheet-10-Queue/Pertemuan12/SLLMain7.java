@@ -85,5 +85,16 @@ public class SLLMain7 {
         }
         while (ulang);
             System.out.println("Terima kasih!");
+            System.out.println("\nData index 1 : ");
+            sll.getData(1);
+
+            System.out.println("Data mahasiswa Dennisse Marcellino berada pada indeks : " + sll.indexOf("Dennisse Marcellino"));
+            System.out.println("");
+
+            sll.removeFirst();
+            sll.removeLast();
+            sll.print();
+            sll.removeAt(0);
+            sll.print();
     }
 }
