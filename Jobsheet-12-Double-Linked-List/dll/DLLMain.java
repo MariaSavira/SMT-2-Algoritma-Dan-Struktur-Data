@@ -47,23 +47,20 @@ public class DLLMain {
                     Mahasiswa01 mhs = inputMahasiswa(scan);
                     list.insertAfter(keyNim, mhs);
                 }
-                /*Karena praktikum 1 belum ada removeFirst, removeLast, dan Search
-                Maka saya jadikan komentar dulu yaa buuu*/
-
-                // case 4 -> list.removeFirst();
-                // case 5 -> list.removeLast();
+                case 4 -> list.removeFirst();
+                case 5 -> list.removeLast();
                 case 6 -> list.print();
-                // case 7 -> {
-                //     System.out.println("Masukkan NIM yang dicari : ");
-                //     String nim = scan.nextLine();
-                //     Node01 found = list.search(nim);
-                //     if (found != null){
-                //         System.out.println("Data ditemukan : ");
-                //         found.data.tampil();
-                //     } else {
-                //         System.out.println("Data tidak ditemukan.");
-                //     }
-                // }
+                case 7 -> {
+                    System.out.print("Masukkan NIM yang dicari : ");
+                    String nim = scan.nextLine();
+                    Node01 found = list.search(nim);
+                    if (found != null){
+                        System.out.println("Data ditemukan : ");
+                        found.data.tampil();
+                    } else {
+                        System.out.println("Data tidak ditemukan.");
+                    }
+                }
                 case 0 -> System.out.println("Keluar dari program.");
                 default -> System.out.println("Pilihan tidak valid!");
             }
